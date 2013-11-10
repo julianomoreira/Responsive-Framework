@@ -1,4 +1,4 @@
-= Easy-Peasy Responsive Grid 
+# Easy-Peasy Responsive Grid 
 
 
 
