@@ -1,4 +1,6 @@
-Responsive-Framework
-====================
+= Easy-Peasy Responsive Grid 
 
-Responsive Framework
+
+
+
+

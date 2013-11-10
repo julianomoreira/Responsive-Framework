@@ -1,0 +1,167 @@
+/*- ==========================================================================
+   styles
+   ========================================================================== */   
+
+/* Color variables */
+
+// Descriptive variables
+
+$darkgray: #333;
+$lightgray: #5d5d5d;
+$lightblue: #7dbece;
+$mediumgray: #666;
+
+// Functional variables
+
+$text-color: $lightgray;
+$link-color: $mediumgray;
+
+html {}
+	
+body {
+	background: #fff; 
+	font-family: $adelle-sans; 
+	font-weight: normal; 
+	font-style: normal; 
+	font-size: 100%; 
+	line-height: 20px; 
+	color: $text-color; 
+	position: relative; 
+	-webkit-font-smoothing: antialiased; 
+	//background: transparent url(../images/body-bg.jpg) repeat top left;
+}
+
+// Links default styles
+
+a img { border: none; }
+
+a:link {
+	font-weight: bold;
+	color: $link-color;
+	//color: rgba(0,0,0,.75);
+	text-decoration: underline;
+}
+a:visited {
+	font-weight: normal;
+	color: $link-color;
+}
+a:hover {
+	//color: rgba(191,77,40,.75);
+	text-decoration: none;	
+}
+a:focus { color: #2795b6; }	
+
+// Abstracted styles from Grid 
+
+.markee {
+	background-color: $dark-gray;	
+	padding: 0 1em;
+}
+
+
+/* Content list */
+
+.products-section {
+	border-top: 1px solid black(.15);
+}
+
+.content-list {
+	> li {
+		border: 1px solid $lightgray;
+	}
+}
+
+/* Content */
+
+.nav {		
+	margin: 1em 0;
+	li {
+		float: left;
+		width: 25%;
+		padding: .25em;				
+		a:link {
+			display: block;
+			text-decoration: none;
+			text-align: center;
+			border: 1px solid black(.130);
+			padding: 1em 0;
+			background-color: black(.125);
+		}
+	}
+}
+
+.row > h4 {
+	font-size: 12px;
+	text-transform: uppercase;
+	padding: 0 0 0 1em;
+	margin: 0 0 1em 0;
+}
+
+/* Footer */
+
+.footer {	
+	background-color: #58344d;
+	@media screen and (max-width: $break-medium) {
+		padding: 27px .25em 10px .25em;
+	}	
+	p {
+		color: #cfadc5;
+		font-size: 13px;
+	}
+	.newsletter {
+		@media screen and (max-width: $break-small) {			
+			width: auto;
+			float: none;			
+		}
+		h4 {
+			color: #fff;
+			font-size: 14px;
+			text-transform: uppercase;
+			@include black-textshadow(.75);
+		}
+		ul 
+		{			
+			li {
+				padding: 0;
+			}
+		}		
+		input[type="text"] {
+			height: 38px;
+			line-height: 38px;
+		}
+		input[type="submit"] {
+			background-color: #926985;
+			width: auto;
+			color: #58344d;
+			line-height: 12px;
+			font-size: 12px;			
+			text-transform: uppercase;
+			@include letterpress(.15);
+		}
+	}
+	ul {
+		li {
+			padding: .25em 0;
+			h4 {
+				color: #fff;
+				font-size: 14px;
+				text-transform: uppercase;
+				@include black-textshadow(.75);
+				
+			}
+			a {
+				color: #cfadc5;
+				text-decoration: none;
+				font-size: 12px;
+				@include black-textshadow(.75);
+			}
+		}
+	}
+	.company {
+		@media screen and (max-width: $break-small) {			
+			width: auto;
+			float: none;			
+		}
+	}
+}
+
