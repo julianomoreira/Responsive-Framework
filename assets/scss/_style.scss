@@ -6,10 +6,13 @@
 
 // Descriptive variables
 
-$darkgray: #333;
+$darkgray: #222;
 $lightgray: #5d5d5d;
 $lightblue: #7dbece;
 $mediumgray: #666;
+$blue: #00a1d9;
+$dark-blue: #008ebf;
+
 
 // Functional variables
 
@@ -19,7 +22,7 @@ $link-color: $mediumgray;
 html {}
 	
 body {
-	background: #fff; 
+	background: #b2ebff; 
 	font-family: $adelle-sans; 
 	font-weight: normal; 
 	font-style: normal; 
@@ -59,10 +62,24 @@ a:focus { color: #2795b6; }
 }
 
 
+.container {
+	//border: 1px solid blue;
+	max-width: 999px;
+	margin: 1em auto;
+	background: $blue;
+	padding: 1em 0;
+	border: 1px solid $dark-blue;
+	h1 + p {
+		color: #fff;
+	}
+}
+
+
 /* Content list */
 
 .products-section {
 	border-top: 1px solid black(.15);
+	padding: 0;
 }
 
 .content-list {
@@ -78,14 +95,20 @@ a:focus { color: #2795b6; }
 	li {
 		float: left;
 		width: 25%;
-		padding: .25em;				
+		padding: 0 1em;
+		margin: 0 ;
+		background-color: transparent;					
 		a:link {
 			display: block;
 			text-decoration: none;
 			text-align: center;
-			border: 1px solid black(.130);
-			padding: 1em 0;
-			background-color: black(.125);
+			border: 1px solid #008ebf;
+			background-color: white(1);
+			padding: .5em;
+			color: #007aa4;			
+		}
+		a:visited {
+			color: #007aa4;
 		}
 	}
 }
